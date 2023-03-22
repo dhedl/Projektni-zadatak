@@ -22,17 +22,15 @@ prodaja['Datum'] = date(godina, mjesec, dan)
 prodaja['Artikl'] = artikl
 prodaja['Korisnik'] = korisnik
 
-print('Informacije o artiklu: ',
-      '\n\tNaslov: '.expandtabs(8), prodaja['Artikl']['Naslov'],
-      '\n\tOpis: '.expandtabs(8), prodaja['Artikl']['Opis'],
-      '\n\tCijena: '.expandtabs(8), prodaja['Artikl']['Cijena'],
-      '\nDatum isteka prodaje: ',
-      '\n\tDan: '.expandtabs(8), prodaja['Datum'].day,
-      '\n\tMjesec: '.expandtabs(8), prodaja['Datum'].month,
-      '\n\tGodina: '.expandtabs(8), prodaja['Datum'].year,
-      '\nInformacije o korisniku: ',
-      '\n\t'.expandtabs(7), prodaja['Korisnik']['Ime_korisnika'], prodaja['Korisnik']['Prezime_korisnika'],
-      '\n\tTelefon: '.expandtabs(8), prodaja['Korisnik']['Telefon'],
-      '\n\tEmail: '.expandtabs(8), prodaja['Korisnik']['Email'])
-
-
+print(f"Informacije o artiklu: "
+      f"\n\tNaslov: {prodaja['Artikl']['Naslov']}".expandtabs(8),
+      f"\n\tOpis: {prodaja['Artikl']['Opis']}".expandtabs(8),
+      f"\n\tCijena: {prodaja['Artikl']['Cijena']}".expandtabs(8),
+      f"\nDatum isteka prodaje: "
+      f"\n\tDan: {prodaja['Datum'].day}".expandtabs(8),
+      f"\n\tMjesec: {prodaja['Datum'].month}".expandtabs(8),
+      f"\n\tGodina: {prodaja['Datum'].year}".expandtabs(8),
+      f"\nInformacije o korisniku: "
+      f"\n\t{prodaja['Korisnik']['Ime_korisnika']} {prodaja['Korisnik']['Prezime_korisnika']}".expandtabs(8),
+      f"\n\tTelefon: {prodaja['Korisnik']['Telefon']}".expandtabs(8),
+      f"\n\tEmail: {prodaja['Korisnik']['Email']}".expandtabs(8))

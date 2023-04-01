@@ -8,10 +8,10 @@ broj_korisnika = int(input('Unesite broj korisnika: '))
 
 for i in range(1, broj_korisnika+1):
     korisnik = {}
-    korisnik['ime'] = input(f'Unesite ime {i}. korisnika: ')
-    korisnik['prezime'] = input(f'Unesite prezime {i}. korisnika: ')
+    korisnik['ime'] = input(f'Unesite ime {i}. korisnika: ').capitalize()
+    korisnik['prezime'] = input(f'Unesite prezime {i}. korisnika: ').capitalize()
     korisnik['telefon'] = int(input(f'Unesite telefon {i}. korisnika: '))
-    korisnik['email'] = input(f'Unesite email {i}. korisnika: ')
+    korisnik['email'] = input(f'Unesite email {i}. korisnika: ').strip()
     korisnici.append(korisnik)
 
 broj_kategorija = int(input('Unesite broj kategorija: '))
@@ -19,6 +19,7 @@ broj_kategorija = int(input('Unesite broj kategorija: '))
 for i in range(1, broj_kategorija+1):
     kategorija = {}
     kategorija['naziv'] = input(f'Unesite naziv {i}. kategorije: ')
+
     artikli = []
     kategorija['artikli'] = artikli
     broj_artikala = int(input(f"Unesite broj artikala za {i} kategoriju: "))
@@ -58,7 +59,7 @@ for i in range(1, broj_prodaja+1):
         print(f"\t{k}. {kategorija['naziv']}")
 
     okategorija = int(input('Odabrana kategorija: '))
-    kategorija['naziv'] = kategorije[okategorija-1]
+    artikli = kategorije[okategorija - 1]['artikli']
 
     print(f"Odaberite artikl {i}. prodaje: ")
 
@@ -66,7 +67,7 @@ for i in range(1, broj_prodaja+1):
         print(f"\t{m}. {artikl['naslov']}")
 
     oartikl = int(input('Odabrani artikl: '))
-    prodaja['artikl'] = artikli[oartikl - 1]
+    prodaja['artikl'] = kategorije[okategorija-1]['artikli'][oartikl - 1]
     prodaje.append(prodaja)
 
 for i, prodaja in enumerate(prodaje):

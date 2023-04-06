@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from kategorija import unos_kategorije
+from korisnik import unos_korisnika
+from prodaja import unos_prodaje, ispis_prodaje
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+korisnici = []
+artikli = []
+kategorije = []
+prodaje = []
 
+broj_korisnika = int(input('Unesite broj korisnika: '))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for i in range(1, broj_korisnika+1):
+    korisnici.append(unos_korisnika(i))
 
+broj_kategorija = int(input('Unesite broj kategorija: '))
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+for i in range(1, broj_kategorija+1):
+    kategorije.append(unos_kategorije(i))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+broj_prodaja = int(input('Unesite broj prodaja: '))
+
+for i in range(1, broj_prodaja+1):
+    prodaje.append(unos_prodaje(korisnici, kategorije, i))
+
+for i, prodaja in enumerate(prodaje, start=1):
+    print(f"Prodaja {i}: ")
+    ispis_prodaje(prodaja)

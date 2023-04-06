@@ -1,5 +1,5 @@
 def ispis_korisnika(korisnik):
-   print(f"\nInformacije o korisniku: ",
+   print(f"Informacije o korisniku: ",
     f"\n\tIme: {korisnik['ime']}",
     f"\n\tPrezime: {korisnik['prezime']}",
     f"\n\tTelefon: {korisnik['telefon']}",

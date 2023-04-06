@@ -3,7 +3,6 @@ from korisnik import unos_korisnika
 from prodaja import unos_prodaje, ispis_prodaje
 
 korisnici = []
-artikli = []
 kategorije = []
 prodaje = []
 

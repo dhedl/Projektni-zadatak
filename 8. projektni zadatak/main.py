@@ -36,14 +36,17 @@ class Window(QtWidgets.QMainWindow):
         self.korisnikGroupBox.setMinimumSize(QtCore.QSize(525, 279))
         self.korisnikGroupBox.setMaximumSize(QtCore.QSize(525, 279))
         self.korisnikGroupBox.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
-        self.verticalLayoutWidget = QtWidgets.QWidget(self.korisnikGroupBox)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(63, 28, 131, 227))
-        self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.korisnikGroupBox)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(14, 28, 49, 227))
-        self.gridLayoutWidget = QtWidgets.QWidget(self.korisnikGroupBox)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(214, 28, 297, 191))
         self.korisnikGroupBox.setTitle("Korisnik")
         self.hLayKorisnikArtikl.addWidget(self.korisnikGroupBox)
+
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.korisnikGroupBox)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(63, 28, 131, 227))
+
+        self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.korisnikGroupBox)
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(14, 28, 49, 227))
+
+        self.gridLayoutWidget = QtWidgets.QWidget(self.korisnikGroupBox)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(214, 28, 297, 191))
 
         self.vLayKorisnikInput = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.vLayKorisnikInput.setContentsMargins(0, 0, 0, 0)
@@ -57,38 +60,6 @@ class Window(QtWidgets.QMainWindow):
             self.comboBoxTipKorisnika.addItem(str(korisnik.value))
 
         self.comboBoxTipKorisnika.currentTextChanged.connect(self.combobox_changed)
-
-        self.text_email = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_email.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_email.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_email)
-
-        self.text_telefon = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_telefon.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_telefon.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_telefon)
-
-        self.text_ime = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_ime.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_ime.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_ime)
-
-        self.text_naziv = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_naziv.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_naziv.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_naziv)
-        self.text_naziv.hide()
-
-        self.text_prezime = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_prezime.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_prezime.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_prezime)
-
-        self.text_web = QtWidgets.QLineEdit(self.verticalLayoutWidget)
-        self.text_web.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_web.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayKorisnikInput.addWidget(self.text_web)
-        self.text_web.hide()
 
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.korisnikGroupBox)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(14, 28, 49, 227))
@@ -111,6 +82,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelEmail.setText("Email")
         self.vLayKorisnikLabels.addWidget(self.labelEmail)
 
+        self.text_email = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_email.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_email.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_email)
+
         self.labelTelefon = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.labelTelefon.setMinimumSize(QtCore.QSize(0, 25))
         self.labelTelefon.setMaximumSize(QtCore.QSize(16777215, 25))
@@ -120,6 +96,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelTelefon.setText("Telefon")
         self.vLayKorisnikLabels.addWidget(self.labelTelefon)
 
+        self.text_telefon = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_telefon.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_telefon.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_telefon)
+
         self.labelIme = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.labelIme.setMinimumSize(QtCore.QSize(0, 25))
         self.labelIme.setMaximumSize(QtCore.QSize(16777215, 25))
@@ -128,6 +109,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelIme.setFont(font)
         self.labelIme.setText("Ime")
         self.vLayKorisnikLabels.addWidget(self.labelIme)
+
+        self.text_ime = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_ime.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_ime.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_ime)
 
         self.labelNaziv = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.labelNaziv.setMinimumSize(QtCore.QSize(0, 25))
@@ -139,6 +125,12 @@ class Window(QtWidgets.QMainWindow):
         self.labelNaziv.hide()
         self.vLayKorisnikLabels.addWidget(self.labelNaziv)
 
+        self.text_naziv = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_naziv.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_naziv.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_naziv)
+        self.text_naziv.hide()
+
         self.labelPrezime = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.labelPrezime.setMinimumSize(QtCore.QSize(0, 25))
         self.labelPrezime.setMaximumSize(QtCore.QSize(16777215, 25))
@@ -147,6 +139,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelPrezime.setFont(font)
         self.labelPrezime.setText("Prezime")
         self.vLayKorisnikLabels.addWidget(self.labelPrezime)
+
+        self.text_prezime = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_prezime.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_prezime.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_prezime)
 
         self.labelWeb = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.labelWeb.setMinimumSize(QtCore.QSize(0, 25))
@@ -158,6 +155,12 @@ class Window(QtWidgets.QMainWindow):
         self.labelWeb.hide()
         self.vLayKorisnikLabels.addWidget(self.labelWeb)
 
+        self.text_web = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.text_web.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_web.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayKorisnikInput.addWidget(self.text_web)
+        self.text_web.hide()
+
         self.gridLayoutWidget = QtWidgets.QWidget(self.korisnikGroupBox)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(214, 28, 297, 191))
 
@@ -166,16 +169,6 @@ class Window(QtWidgets.QMainWindow):
         self.labelPopisKorisnika = QtWidgets.QLabel(self.gridLayoutWidget)
         self.labelPopisKorisnika.setText("Popis korisnika")
         self.gLayPopisKorisnika.addWidget(self.labelPopisKorisnika, 0, 1, 1, 1)
-
-        self.pushButtonDodajKorisnika = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.pushButtonDodajKorisnika.setText("Dodaj korisnika")
-        self.pushButtonDodajKorisnika.clicked.connect(self.unos_korisnika)
-        self.gLayPopisKorisnika.addWidget(self.pushButtonDodajKorisnika, 2, 1, 1, 1)
-
-        self.pushButtonObrisiKorisnika = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.pushButtonObrisiKorisnika.setText("Obriši korisnika")
-        self.pushButtonObrisiKorisnika.clicked.connect(self.obrisi_korisnika)
-        self.gLayPopisKorisnika.addWidget(self.pushButtonObrisiKorisnika, 2, 2, 1, 1)
 
         self.listPopisKorisnika = QtWidgets.QListWidget(self)
         self.gLayPopisKorisnika.addWidget(self.listPopisKorisnika, 1, 1, 1, 2)
@@ -186,6 +179,16 @@ class Window(QtWidgets.QMainWindow):
         self.scrollArea.setLayout(QtWidgets.QVBoxLayout())
         self.scrollArea.setWidget(self.listPopisKorisnika)
         self.gLayPopisKorisnika.addWidget(self.scrollArea, 1, 1, 1, 2)
+
+        self.pushButtonDodajKorisnika = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDodajKorisnika.setText("Dodaj korisnika")
+        self.pushButtonDodajKorisnika.clicked.connect(self.unos_korisnika)
+        self.gLayPopisKorisnika.addWidget(self.pushButtonDodajKorisnika, 2, 1, 1, 1)
+
+        self.pushButtonObrisiKorisnika = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonObrisiKorisnika.setText("Obriši korisnika")
+        self.pushButtonObrisiKorisnika.clicked.connect(self.obrisi_korisnika)
+        self.gLayPopisKorisnika.addWidget(self.pushButtonObrisiKorisnika, 2, 2, 1, 1)
 
         self.label_error = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
@@ -241,8 +244,23 @@ class Window(QtWidgets.QMainWindow):
         self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.artiklGroupBox)
         self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(13, 28, 49, 227))
 
+        self.verticalLayoutWidget_4 = QtWidgets.QWidget(self.artiklGroupBox)
+        self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(62, 28, 131, 227))
+        self.vLayArtiklInput = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_4)
+        self.vLayArtiklInput.setContentsMargins(0, 0, 0, 0)
+
         self.vLayArtiklLabels = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.vLayArtiklLabels.setContentsMargins(0, 0, 0, 0)
+
+        self.comboBoxArtikl = QtWidgets.QComboBox(self.verticalLayoutWidget_4)
+        self.comboBoxArtikl.setMinimumSize(QtCore.QSize(0, 25))
+        self.comboBoxArtikl.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayArtiklInput.addWidget(self.comboBoxArtikl)
+
+        for artikl in TipArtikla:
+            self.comboBoxArtikl.addItem(str(artikl.value))
+
+        self.comboBoxArtikl.currentTextChanged.connect(self.combobox_changed_artikl)
 
         self.prazanLabelArtikl = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.prazanLabelArtikl.setMinimumSize(QtCore.QSize(0, 25))
@@ -259,6 +277,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelNaslov.setText("Naslov")
         self.vLayArtiklLabels.addWidget(self.labelNaslov)
 
+        self.text_naslov = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
+        self.text_naslov.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_naslov.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayArtiklInput.addWidget(self.text_naslov)
+
         self.labelOpis = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.labelOpis.setMinimumSize(QtCore.QSize(0, 25))
         self.labelOpis.setMaximumSize(QtCore.QSize(16777215, 25))
@@ -267,6 +290,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelOpis.setFont(font)
         self.labelOpis.setText("Opis")
         self.vLayArtiklLabels.addWidget(self.labelOpis)
+
+        self.text_opis = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
+        self.text_opis.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_opis.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayArtiklInput.addWidget(self.text_opis)
 
         self.labelCijena = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.labelCijena.setMinimumSize(QtCore.QSize(0, 25))
@@ -277,6 +305,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelCijena.setText("Cijena")
         self.vLayArtiklLabels.addWidget(self.labelCijena)
 
+        self.text_cijena = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
+        self.text_cijena.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_cijena.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayArtiklInput.addWidget(self.text_cijena)
+
         self.labelSnaga = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.labelSnaga.setMinimumSize(QtCore.QSize(0, 25))
         self.labelSnaga.setMaximumSize(QtCore.QSize(16777215, 25))
@@ -285,6 +318,11 @@ class Window(QtWidgets.QMainWindow):
         self.labelSnaga.setFont(font)
         self.labelSnaga.setText("Snaga")
         self.vLayArtiklLabels.addWidget(self.labelSnaga)
+
+        self.text_snaga = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
+        self.text_snaga.setMinimumSize(QtCore.QSize(0, 25))
+        self.text_snaga.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.vLayArtiklInput.addWidget(self.text_snaga)
 
         self.labelKvadratura = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.labelKvadratura.setMinimumSize(QtCore.QSize(0, 25))
@@ -295,41 +333,6 @@ class Window(QtWidgets.QMainWindow):
         self.labelKvadratura.setText("Kvadrat")
         self.labelKvadratura.hide()
         self.vLayArtiklLabels.addWidget(self.labelKvadratura)
-
-        self.verticalLayoutWidget_4 = QtWidgets.QWidget(self.artiklGroupBox)
-        self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(62, 28, 131, 227))
-        self.vLayArtiklInput = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_4)
-        self.vLayArtiklInput.setContentsMargins(0, 0, 0, 0)
-
-        self.comboBoxArtikl = QtWidgets.QComboBox(self.verticalLayoutWidget_4)
-        self.comboBoxArtikl.setMinimumSize(QtCore.QSize(0, 25))
-        self.comboBoxArtikl.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayArtiklInput.addWidget(self.comboBoxArtikl)
-
-        for artikl in TipArtikla:
-            self.comboBoxArtikl.addItem(str(artikl.value))
-
-        self.comboBoxArtikl.currentTextChanged.connect(self.combobox_changed_artikl)
-
-        self.text_naslov = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
-        self.text_naslov.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_naslov.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayArtiklInput.addWidget(self.text_naslov)
-
-        self.text_opis = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
-        self.text_opis.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_opis.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayArtiklInput.addWidget(self.text_opis)
-
-        self.text_cijena = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
-        self.text_cijena.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_cijena.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayArtiklInput.addWidget(self.text_cijena)
-
-        self.text_snaga = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
-        self.text_snaga.setMinimumSize(QtCore.QSize(0, 25))
-        self.text_snaga.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.vLayArtiklInput.addWidget(self.text_snaga)
 
         self.text_kvadratura = QtWidgets.QLineEdit(self.verticalLayoutWidget_4)
         self.text_kvadratura.setMinimumSize(QtCore.QSize(0, 25))
@@ -399,6 +402,7 @@ class Window(QtWidgets.QMainWindow):
 
         self.gLayPopisProdaja.setContentsMargins(0, 0, 0, 0)
         self.labelPopisProdaja = QtWidgets.QLabel(self.gridLayoutWidget_3)
+        self.labelPopisProdaja.setText("Popis prodaja")
         self.gLayPopisProdaja.addWidget(self.labelPopisProdaja, 0, 1, 1, 1)
 
         self.pushButtonDodajProdaju = QtWidgets.QPushButton(self.gridLayoutWidget_3)
@@ -575,10 +579,7 @@ class Window(QtWidgets.QMainWindow):
 
         if error_prodaja is None:
             broj_korisnika = int(self.comboBoxProdajaKorisnik.currentIndex())
-            broj_artikla = int(self.comboBoxArtikl.currentIndex())
-
-            if broj_korisnika or broj_artikla == 0:
-                self.label_errorProdaja.setText(error_prodaja)
+            broj_artikla = int(self.comboBoxProdaja.currentIndex())
 
             prodaje.append(Prodaja(self.datumProdaja.date(), korisnici[broj_korisnika], artikli[broj_artikla]))
 
